@@ -46,7 +46,18 @@
       getTotal(){
         this.total = this.cart.reduce((acc,item)=>acc + (item.preco * item.qty),0 )
         console.log(this,total)
+      },
+      deactivate(index){
+        this.categorias.forEach(categoria => {
+          categoria.active = false;
+        })        
+        this.categorias[index].active = true
+
+      },
+      filterProductsByCategory(category) {
+        this.produtos = Alpine.store('produtos').filter(product => product.categoria === category);
       }
+
     }"
   >
     <div class="boxed_wrapper ltr">
@@ -361,12 +372,15 @@
                   </div>
                   <div class="widget-content">
                     <ul class="category-list clearfix">
-                      <template x-for="item in categorias">
-                        <li :class="item.active && 'active'">
+                      <template x-for="(item ,index) in categorias">
+                        <li>
                           <i class="flaticon-right"></i
-                          ><a href="shop-details.html" @click=""
-                            ><span x-text="item.categoria"></span
-                          ></a>
+                          ><a
+                            :class="item.active && 'active'"
+                            x-on:click="deactivate(index);filterProductsByCategory(item.categoria)"
+                            href="#categoria"
+                            ><span x-text="item.categoria"></span>
+                          </a>
                         </li>
                       </template>
                     </ul>
