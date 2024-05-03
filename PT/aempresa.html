@@ -34,19 +34,30 @@
     <link href="../assets/css/style.css" rel="stylesheet" />
     <link href="../assets/css/responsive.css" rel="stylesheet" />
     <script defer src="../assets/js/alpine.cdn.min.js"></script>
+
   </head>
 
   <!-- page wrapper -->
   <body
-    x-data="{
+  x-data="{
     categorias:$store.categorias,
-    produtos:Alpine.store('produtos').filter(product => product.categoria === 'Caixas');,
+    produtos:$store.produtos,
     cart:$store.cart,
     total:$store.total,
     getTotal(){
       this.total = this.cart.reduce((acc,item)=>acc + (item.preco * item.qty),0 )
-      console.log(this,total)
+    
     },
+    deactivate(index){
+      this.categorias.forEach(categoria => {
+        categoria.active = false;
+      })        
+      this.categorias[index].active = true
+
+    },
+    filterProductsByCategory(category) {
+      this.produtos = Alpine.store('produtos').filter(product => product.categoria === category);
+    }
 
   }"
   >
@@ -131,7 +142,12 @@
                         -------------------------------------------
                       </div>
                       <div style="margin-top: 15px">
-                        <button class="btn btn-success">Finalizar</button>
+                        <a
+                          target="_blank"
+                          href="https://wa.me/+244931781843"
+                          class="btn btn-success"
+                          >Finalizar</a
+                        >
                       </div>
                     </div>
                   </div>
@@ -247,7 +263,8 @@
                   </li>
                   <li class="cart-box">
                     <a href="shop-1.html" class="navSidebar-button"
-                      ><i class="flaticon-shopping-cart-1"></i><span>0</span></a
+                      ><i class="flaticon-shopping-cart-1"></i
+                      ><span x-text="cart.length">0</span></a
                     >
                   </li>
                 </ul>
@@ -277,7 +294,6 @@
           </div>
         </div>
       </header>
-      <!-- main-header end -->
 
       <!-- Mobile Menu  -->
       <div class="mobile-menu">
@@ -510,21 +526,17 @@
                     />
                     <ul class="list clearfix">
                       <li>
-                        <a href="#shop-1.html"><i class="flaticon-cart"></i></a>
+                        <a href="#shop-1.html"><i class="flaticon-cart navSidebar-button"></i></a>
                       </li>
                       <li>
-                        <a
-                          x-on:click="AddCart(produtos[4]); item.qty = '1'; cart.push(item);getTotal()"
-                          href="#shop-details.html"
-                          >adicionar</a
-                        >
+                        <a x-on:click=" item = produtos[79]; AddCart(item);  item.qty = '1'; cart.push(item);getTotal()"  href="#caixas">adicionar </a>
                       </li>
                     </ul>
                   </figure>
                   <div class="lower-content">
                     <div class="inner">
                       <h6>
-                        <a href="#shop-details.html">Caixa Serra da Leba</a>
+                        <a href="#caixas">Caixa Serra da Leba</a>
                       </h6>
                       <span class="price">42.898,00 kz</span>
                     </div>
@@ -546,22 +558,16 @@
                     />
                     <ul class="list clearfix">
                       <li>
-                        <a href="#shop-1.html"><i class="flaticon-cart"></i></a>
+                        <a href="#shop-1.html"><i class="flaticon-cart navSidebar-button"></i></a>
                       </li>
                       <li>
-                        <a href="#shop-details.html">adicionar</a>
+                        <a x-on:click="item=produtos[77]; AddCart(item); item.qty = '1'; cart.push(item);getTotal()"  href="#caixas">adicionar </a>
                       </li>
                     </ul>
                   </figure>
                   <div class="lower-content">
                     <div class="inner">
-                      <h6>
-                        <a
-                          x-on:click="AddCart(produtos[3]); item.qty = '1'; cart.push(item);getTotal()"
-                          href="#shop-details.html"
-                          >Caixa Kalandula</a
-                        >
-                      </h6>
+                      <h6><a href="#caixas">Caixa Kalandula</a></h6>
                       <span class="price">54.108,00 kz</span>
                     </div>
                   </div>
@@ -582,20 +588,16 @@
                     />
                     <ul class="list clearfix">
                       <li>
-                        <a href="#shop-1.html"><i class="flaticon-cart"></i></a>
+                        <a href="#shop-1.html"><i class="flaticon-cart navSidebar-button"></i></a>
                       </li>
                       <li>
-                        <a
-                          x-on:click="AddCart(produtos[2]); item.qty = '1'; cart.push(item);getTotal()"
-                          href="#shop-details.html"
-                          >adicionar ao carrinho</a
-                        >
+                        <a x-on:click=" item = produtos[76]; AddCart(item); item.qty = '1'; cart.push(item);getTotal()"  href="#caixas">adicionar </a>
                       </li>
                     </ul>
                   </figure>
                   <div class="lower-content">
                     <div class="inner">
-                      <h6><a href="#shop-details.html">Caixa Kwanza</a></h6>
+                      <h6><a href="#caixas">Caixa Kwanza</a></h6>
                       <span class="price">70.408,00 kz</span>
                     </div>
                   </div>
@@ -616,21 +618,17 @@
                     />
                     <ul class="list clearfix">
                       <li>
-                        <a href="#shop-1.html"><i class="flaticon-cart"></i></a>
+                        <a href="#shop-1.html"><i class="flaticon-cart navSidebar-button"></i></a>
                       </li>
                       <li>
-                        <a
-                          href="#caixa"
-                          x-on:click="AddCart(produtos[1]); item.qty = '1'; cart.push(item);getTotal()"
-                          >adicionar ao carrinho</a
-                        >
+                        <a x-on:click="item = produtos[75]; AddCart(item); item.qty = '1'; cart.push(item);getTotal()" href="#caixas">adicionar </a>
                       </li>
                     </ul>
                   </figure>
                   <div class="lower-content">
                     <div class="inner">
                       <h6>
-                        <a href="#shop-details.html">Caixa Gulungo</a>
+                        <a  href="#caixas">Caixa Gulungo</a>
                       </h6>
                       <span class="price">97.798,00 kz</span>
                     </div>
@@ -754,10 +752,15 @@
       <!-- main-footer end -->
 
       <!--Scroll to top-->
-      <button class="scroll-top scroll-to-target" data-target="html">
+      <button class="scroll-top scroll-to-target " data-target="html">
+        
         <span class="fa fa-arrow-up"></span>
       </button>
+      <button x-show="total > 0" class="scroll-top  navSidebar-button" style="margin-right: 60px;" data-target="html">
+        <i class="flaticon-shopping-cart-1"></i></button>
+
     </div>
+    
 
     <!-- jequery plugins -->
     <script src="../assets/js/jquery.js"></script>
