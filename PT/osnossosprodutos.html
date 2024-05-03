@@ -34,6 +34,19 @@
     <link href="../assets/css/style.css" rel="stylesheet" />
     <link href="../assets/css/responsive.css" rel="stylesheet" />
     <script defer src="../assets/js/alpine.cdn.min.js"></script>
+    <style>.toast {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      z-index: 999999;
+    }</style>
   </head>
 
   <!-- page wrapper -->
@@ -425,8 +438,12 @@
                             >
                             <span>
                               <button
-                                class="btn btn-success btn-sm"
-                                x-on:click="AddCart(item); item.qty = '1'; cart.push(item);getTotal()"
+                           
+                                class="btn btn-success btn-sm add-to-cart-btn" 
+                                x-on:click="
+                                const idExists =  cart.some(obj => obj.id === item.id);
+                                if(idExists){return false}
+                                AddCart(item); item.qty = '1'; cart.push(item);getTotal()"
                               >
                                 Adicionar <i class="fas fa-plus"></i></button
                             ></span>
@@ -448,6 +465,7 @@
           </div>
         </div>
       </section>
+      <div class="toast">  <i class="flaticon-shopping-cart-1"></i>  <i class="fa fa-check"></i></div>
       <!-- main-footer -->
       <footer class="main-footer mr-0">
         <div class="auto-container">
@@ -565,6 +583,7 @@
       </button>
       <button x-show="total > 0" class="scroll-top  navSidebar-button" style="margin-right: 60px;" data-target="html">
         <i class="flaticon-shopping-cart-1"></i></button>
+       
     </div>
 
     <!-- jequery plugins -->
@@ -584,6 +603,22 @@
     <!-- main-js -->
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/mainscript.js"></script>
+    <script> 
+    
+    var buttons = document.getElementsByClassName('add-to-cart-btn');
+
+for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener('click', function() {
+        var toast = document.querySelector('.toast');
+        toast.style.opacity = 1;
+        setTimeout(function() {
+            toast.style.opacity = 0;
+        }, 1500); // Adjust the timeout as needed
+    });
+}
+
+    
+    </script>
   </body>
-  <!-- End of .page_wrapper -->
+ 
 </html>

@@ -152,7 +152,7 @@ function CheckCart() {
 }
 
 function AddCart(item) {
-  
+
   item.qty = 1;
 
   var cart = CheckCart();
