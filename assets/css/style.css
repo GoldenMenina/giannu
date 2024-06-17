@@ -3621,7 +3621,7 @@ div#mCSB_1_container {
 .feature-section .single-item .inner-box .icon-box:before {
   position: absolute;
   content: "";
-  background: #c42526;
+  
   width: 72px;
   height: 72px;
   border-radius: 50%;
