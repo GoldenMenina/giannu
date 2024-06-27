@@ -1,59 +1,70 @@
 document.addEventListener("alpine:init", () => {
   CheckCart();
   Alpine.store("produtos", [
-    { id: 1, corte: "Acém", preco: 7688, categoria: "Bovinos" },
-    { id: 2, corte: "Agulha", preco: 5938, categoria: "Bovinos" },
-    { id: 3, corte: "Alcatra", preco: 11138, categoria: "Bovinos" },
+    { id: 1, corte: "Acém", preco: 7688, categoria: "Bovinos", image:"../assets/images/carnes/acembovino.jpg" },
+    { id: 2, corte: "Agulha", preco: 5938, categoria: "Bovinos", image:"../assets/images/carnes/agulhabovinos.png" },
+    { id: 3, corte: "Alcatra", preco: 11138, categoria: "Bovinos",image:"../assets/images/carnes/alcatrabovino.png" },
     {
       id: 4,
       corte: "Almondegas Com Tempero",
       preco: 6670,
-      categoria: "Bovinos",
+      categoria: "Bovinos",image:"../assets/images/carnes/almondegabovino.jpg"
     },
     {
       id: 5,
       corte: "Almondegas sem Tempero",
       preco: 6370,
-      categoria: "Bovinos",
+      categoria: "Bovinos",image:"../assets/images/carnes/almondegabovino.jpg"
     },
-    { id: 6, corte: "Carne Picada", preco: 6018, categoria: "Bovinos" },
-    { id: 7, corte: "Carne Seca", preco: 12000, categoria: "Bovinos" },
-    { id: 8, corte: "Chambão", preco: 5938, categoria: "Bovinos" },
-    { id: 9, corte: "Coração", preco: 2367, categoria: "Bovinos" },
-    { id: 10, corte: "Costela em Tira", preco: 6786, categoria: "Bovinos" },
-    { id: 11, corte: "Cachaço", preco: 5938, categoria: "Bovinos" },
-    { id: 12, corte: "Costeleta", preco: 6715, categoria: "Bovinos" },
-    { id: 13, corte: "Cupim", preco: 5938, categoria: "Bovinos" },
-    { id: 14, corte: "Dobrada", preco: 4000, categoria: "Bovinos" },
-    { id: 15, corte: "Entrecôte", preco: 12438, categoria: "Bovinos" },
+    { id: 6, corte: "Carne Picada", preco: 6018, categoria: "Bovinos",image:"../assets/images/carnes/carnesecabovino.jpg" },
+    { id: 7, corte: "Carne Seca", preco: 12000, categoria: "Bovinos" ,image:"../assets/images/carnes/carnesecabovino.jpg"},
+    { id: 8, corte: "Chambão", preco: 5938, categoria: "Bovinos",image:"../assets/images/carnes/chambaobovino.jpg" },
+    { id: 9, corte: "Coração", preco: 2367, categoria: "Bovinos",image:"../assets/images/carnes/coracaobovino.jpg" },
+    { id: 10, corte: "Costela em Tira", preco: 6786, categoria: "Bovinos" ,image:"../assets/images/carnes/costelatirabovino.png"},
+    { id: 11, corte: "Cachaço", preco: 5938, categoria: "Bovinos" ,image:"../assets/images/carnes/cachussobovino.jpg"},
+    { id: 12, corte: "Costeleta", preco: 6715, categoria: "Bovinos" ,image:"../assets/images/carnes/costeletabovino.png"},
+    { id: 13, corte: "Cupim", preco: 5938, categoria: "Bovinos",image:"../assets/images/carnes/cupimbovino.png" },
+    { id: 14, corte: "Dobrada", preco: 4000, categoria: "Bovinos",image:"../assets/images/carnes/dobrada.webp" },
+    { id: 15, corte: "Entrecôte", preco: 12438, categoria: "Bovinos",image:"../assets/images/carnes/entrecotebovino.jpg" },
     {
       id: 16,
       corte: "Espetada de Alcatra",
       preco: 13000,
-      categoria: "Bovinos",
+      categoria: "Bovinos",image:"../assets/images/carnes/espectadaalctra.jpg" 
     },
-    { id: 17, corte: "Fígado", preco: 4075, categoria: "Bovinos" },
-    { id: 18, corte: "Ganso", preco: 5938, categoria: "Bovinos" },
+    { id: 17, corte: "Fígado", preco: 4075, categoria: "Bovinos" 
+      ,image:"../assets/images/carnes/figado.png" 
+      
+    },
+    
+    
+    { id: 18, corte: "Ganso", preco: 5938, categoria: "Bovinos" ,image:"../assets/images/carnes/ganso.jpg" },
     {
       id: 19,
       corte: "Hambúrguer Com Tempero",
       preco: 6670,
-      categoria: "Bovinos",
+      categoria: "Bovinos"
+      ,image:"../assets/images/carnes/ham.png" 
     },
     {
       id: 20,
       corte: "Hambúrguer Sem Tempero",
       preco: 6370,
-      categoria: "Bovinos",
+      categoria: "Bovinos",image:"../assets/images/carnes/ham.png" 
     },
-    { id: 21, corte: "Lombinho", preco: 13941, categoria: "Bovinos" },
-    { id: 22, corte: "Maminha", preco: 8550, categoria: "Bovinos" },
-    { id: 23, corte: "Mão de Vaca", preco: 1375, categoria: "Bovinos" },
-    { id: 24, corte: "Osso Buco", preco: 5470, categoria: "Bovinos" },
-    { id: 25, corte: "Osso para Sopa", preco: 1130, categoria: "Bovinos" },
-    { id: 26, corte: "Pá", preco: 6150, categoria: "Bovinos" },
-    { id: 27, corte: "Peito Alto", preco: 4800, categoria: "Bovinos" },
-    { id: 28, corte: "Picanha", preco: 14030, categoria: "Bovinos" },
+    { id: 21, corte: "Lombinho", preco: 13941, categoria: "Bovinos",image:"../assets/images/carnes/lombinha.jpg"  },
+    
+    
+    
+    { id: 22, corte: "Maminha", preco: 8550, categoria: "Bovinos",image:"../assets/images/carnes/maminhabovino.jpg" },
+    
+    
+    { id: 23, corte: "Mão de Vaca", preco: 1375, categoria: "Bovinos",image:"../assets/images/carnes/maodevaca.jpg" },
+    { id: 24, corte: "Osso Buco", preco: 5470, categoria: "Bovinos" ,image:"../assets/images/carnes/ossobuco.png"},
+    { id: 25, corte: "Osso para Sopa", preco: 1130, categoria: "Bovinos",image:"../assets/images/carnes/ossoparasopa.jpg" },
+    { id: 26, corte: "Pá", preco: 6150, categoria: "Bovinos",image:"../assets/images/carnes/pa.png" },
+    { id: 27, corte: "Peito Alto", preco: 4800, categoria: "Bovinos" ,image:"../assets/images/carnes/peitoalto.jpeg"},
+    { id: 28, corte: "Picanha", preco: 14030, categoria: "Bovinos",image:"../assets/images/carnes/picanha.jpg" },
     { id: 29, corte: "Pojadouro", preco: 7550, categoria: "Bovinos" },
     { id: 30, corte: "Rabadilha", preco: 7550, categoria: "Bovinos" },
     { id: 31, corte: "Rabo de Boi", preco: 5770, categoria: "Bovinos" },

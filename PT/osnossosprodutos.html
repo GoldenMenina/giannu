@@ -53,6 +53,7 @@
   <body
     x-data="{
       categorias:$store.categorias,
+      imagedisp:'../assets/images/resource/shop/shop-1.jpg',
       produtos:$store.produtos,
       cart:$store.cart,
       total:$store.total,
@@ -414,10 +415,10 @@
                       <div class="shop-block-one">
                         <div class="inner-box">
                           <figure class="image-box">
-                            <!-- <img
-                              src="../assets/images/resource/shop/shop-1.jpg"
+                               <img
+                              :src="item.image"
                               alt=""
-                            /> -->
+                            /> 
                           </figure>
                           <div class="lower-content">
                             <h6>
