@@ -166,7 +166,7 @@
               <ul class="info-list clearfix">
                 <li>
                   <i class="flaticon-location-pin"></i>
-                  219 Bedford Street Birmingham, AL 35211
+               Avendida Pedro de castro Van-Dúnem Loy, Talatona
                 </li>
                 <li>
                   <i class="flaticon-envelope"></i>
@@ -310,12 +310,12 @@
           <div class="menu-outer">
             <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
           </div>
-          <div class="contact-info">
+            <div class="contact-info">
             <h4>Contact Info</h4>
             <ul>
-              <li>Chicago 12, Melborne City, USA</li>
-              <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-              <li><a href="mailto:xxx">xxx</a></li>
+              <li>Avendida Pedro de castro Van-Dúnem Loy, Talatona</li>
+              <li><a href="tel:+244931 781843">+244  931 781 843/ 933 410 964</a></li>
+              <li><a href="mailto:Giannu.lda@gmail.com">Giannu.lda@gmail.com</a></li>
             </ul>
           </div>
           <div class="social-links">
@@ -442,7 +442,7 @@
         <div class="auto-container">
           <div class="sec-title light text-center">
             <span>Compre Agora</span>
-            <h2>Produtos em Destaque</h2>
+            <h2>Produtos Suínos</h2>
           </div>
           <div class="row clearfix">
             <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
@@ -454,7 +454,7 @@
                 <div class="inner-box">
                   <figure class="image-box">
                     <img
-                      src="../assets/images/produtos/IMG-20240425-WA0024.jpg"
+                      src="../assets/images/carnes/barrigasuina.jpg"
                       alt=""
                     />
                     <ul class="list clearfix">
@@ -462,17 +462,23 @@
                         <a href="#shop-1.html"><i class="flaticon-cart navSidebar-button"></i></a>
                       </li>
                       <li>
-                        <a x-on:click="   const idExists =  cart.some(obj => obj.id === item.id);
-                                if(idExists){return false}; item = produtos[79]; AddCart(item);  item.qty = '1'; cart.push(item);getTotal()"  href="#caixas">adicionar </a>
+                        <a x-on:click="   const item =  produtos[34];
+                        const existingItem = cart.find(obj => obj.id === item.id);
+                        if (existingItem) {
+                        return false;
+                        }
+                        item.qty = '1';
+                        cart.push(item);
+                        getTotal();"  href="#caixas">adicionar </a>
                       </li>
                     </ul>
                   </figure>
                   <div class="lower-content">
                     <div class="inner">
                       <h6>
-                        <a href="#caixas">Caixa Serra da Leba</a>
+                        <a href="#caixas">Barriga (suíno)</a>
                       </h6>
-                      <span class="price">42.898,00 kz</span>
+                      <span class="price">4,918,00 kz</span>
                     </div>
                   </div>
                 </div>
@@ -487,7 +493,7 @@
                 <div class="inner-box">
                   <figure class="image-box">
                     <img
-                      src="../assets/images/produtos/IMG-20240425-WA0026.jpg"
+                      src="../assets/images/carnes/bifanas.jpg"
                       alt=""
                     />
                     <ul class="list clearfix">
@@ -495,15 +501,21 @@
                         <a href="#shop-1.html"><i class="flaticon-cart navSidebar-button"></i></a>
                       </li>
                       <li>
-                        <a x-on:click="   const idExists =  cart.some(obj => obj.id === item.id);
-                                if(idExists){return false};item=produtos[77]; AddCart(item); item.qty = '1'; cart.push(item);getTotal()"  href="#caixas">adicionar </a>
+                        <a x-on:click="   const item = produtos[35];
+                        const existingItem = cart.find(obj => obj.id === item.id);
+                        if (existingItem) {
+                        return false;
+                        }
+                        item.qty = '1';
+                        cart.push(item);
+                        getTotal();"  href="#caixas">adicionar </a>
                       </li>
                     </ul>
                   </figure>
                   <div class="lower-content">
                     <div class="inner">
-                      <h6><a href="#caixas">Caixa Kalandula</a></h6>
-                      <span class="price">54.108,00 kz</span>
+                      <h6><a href="#caixas">Bifana/Febra (suíno)</a></h6>
+                      <span class="price">4.679,00 kz</span>
                     </div>
                   </div>
                 </div>
@@ -518,7 +530,7 @@
                 <div class="inner-box">
                   <figure class="image-box">
                     <img
-                      src="../assets/images/produtos/IMG-20240425-WA0028.jpg"
+                      src="../assets/images/carnes/chispe.jpg"
                       alt=""
                     />
                     <ul class="list clearfix">
@@ -526,15 +538,21 @@
                         <a href="#shop-1.html"><i class="flaticon-cart navSidebar-button"></i></a>
                       </li>
                       <li>
-                        <a x-on:click="   const idExists =  cart.some(obj => obj.id === item.id);
-                                if(idExists){return false}; item = produtos[76]; AddCart(item); item.qty = '1'; cart.push(item);getTotal()"  href="#caixas">adicionar </a>
+                        <a x-on:click="   const item = produtos[40];
+                        const existingItem = cart.find(obj => obj.id === item.id);
+                        if (existingItem) {
+                        return false;
+                        }
+                        item.qty = '1';
+                        cart.push(item);
+                        getTotal();"  href="#caixas">adicionar </a>
                       </li>
                     </ul>
                   </figure>
                   <div class="lower-content">
                     <div class="inner">
-                      <h6><a href="#caixas">Caixa Kwanza</a></h6>
-                      <span class="price">70.408,00 kz</span>
+                      <h6><a href="#caixas">Chispe(suíno)</a></h6>
+                      <span class="price">3,575,00 kz</span>
                     </div>
                   </div>
                 </div>
@@ -549,7 +567,7 @@
                 <div class="inner-box">
                   <figure class="image-box">
                     <img
-                      src="../assets/images/produtos/IMG-20240425-WA0027.jpg"
+                      src="../assets/images/carnes/cacho.jpg"
                       alt=""
                     />
                     <ul class="list clearfix">
@@ -557,17 +575,23 @@
                         <a href="#shop-1.html"><i class="flaticon-cart navSidebar-button"></i></a>
                       </li>
                       <li>
-                        <a x-on:click="   const idExists =  cart.some(obj => obj.id === item.id);
-                                if(idExists){return false};item = produtos[75]; AddCart(item); item.qty = '1'; cart.push(item);getTotal()" href="#caixas">adicionar </a>
+                        <a x-on:click="   const item = produtos[37];
+                        const existingItem = cart.find(obj => obj.id === item.id);
+                        if (existingItem) {
+                        return false;
+                        }
+                        item.qty = '1';
+                        cart.push(item);
+                        getTotal();" href="#caixas">adicionar </a>
                       </li>
                     </ul>
                   </figure>
                   <div class="lower-content">
                     <div class="inner">
                       <h6>
-                        <a  href="#caixas">Caixa Gulungo</a>
+                        <a  href="#caixas">Cachaço (suino)</a>
                       </h6>
-                      <span class="price">97.798,00 kz</span>
+                      <span class="price">4,978,00 kz</span>
                     </div>
                   </div>
                 </div>
@@ -575,14 +599,14 @@
             </div>
           </div>
           <div class="more-btn centred">
-            <a href="PT/osnossosprodutos.html" class="theme-btn"
+            <a href="osnossosprodutos.html" class="theme-btn"
               >Ver todos os produtos</a
             >
           </div>
         </div>
       </section>
 <section>
-        <img src="assets/images/cortes-de-carne-do-boi-infografico.jpg">
+        <img src="..../about-element-2.htmlassets/images/cortes-de-carne-do-boi-infografico.jpg">
       </section>
       <!-- main-footer -->
       <footer class="main-footer mr-0">
@@ -622,7 +646,7 @@
                       <li>
                         <i class="flaticon-maps-and-flags"></i>
                         <p>Endereço</p>
-                        <h5>Talatona</h5>
+                        <h5>Avendida Pedro de castro Van-Dúnem Loy, Talatona</h5>
                       </li>
                     </ul>
                     <ul class="social-links clearfix">
