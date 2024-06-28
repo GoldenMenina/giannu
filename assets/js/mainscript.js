@@ -98,45 +98,65 @@ document.addEventListener("alpine:init", () => {
     { id: 59, corte: "Secretos", preco: 6008, categoria: "Suínos",image:"../assets/images/carnes/secretossuino.jpg"  },
     { id: 60, corte: "T-Bone", preco: 4653, categoria: "Suínos" ,image:"../assets/images/carnes/tbonesuinos.jpeg"},
     { id: 61, corte: "Tomahawk", preco: 7006, categoria: "Suínos",image:"../assets/images/carnes/tomahawksuino.jpg" },
-    { id: 62, corte: "Leitão Inteiro", preco: 33000, categoria: "Suínos" },
-    { id: 63, corte: "Meio Leitão", preco: 19000, categoria: "Suínos" },
-    { id: 64, corte: "Meio Leitão", preco: 19000, categoria: "Suínos" },
-    { id: 65, corte: "Bife de Frango", preco: 7859, categoria: "Aves" },
+    { id: 62, corte: "Leitão Inteiro", preco: 33000, categoria: "Suínos",image:"../assets/images/carnes/Leitao.png"  },
+    { id: 63, corte: "Meio Leitão", preco: 19000, categoria: "Suínos",image:"../assets/images/carnes/meioleitao.jpg" },
+    
+    { id: 65, corte: "Bife de Frango", preco: 7859, categoria: "Aves",image:"../assets/images/carnes/bife-de-frango.png" },
     {
       id: 66,
       corte: "Bife de Peito de Frango Panado",
       preco: 8958,
-      categoria: "Aves",
+      categoria: "Aves"
+      ,image:"../assets/images/carnes/Bife-de-Peito-de-Frango-kg.jpg"
     },
     {
       id: 67,
       corte: "Bife de Peito de Frango Recheado",
       preco: 8692,
-      categoria: "Aves",
+      categoria: "Aves"
+      ,image:"../assets/images/carnes/biferecheado.jpg"
     },
-    { id: 68, corte: "Coxa de Frango", preco: 2905, categoria: "Aves" },
+    { id: 68, corte: "Coxa de Frango", preco: 2905, categoria: "Aves"
+         ,image:"../assets/images/carnes/coxa-frango-1000x1000.jpg"
+    },
     {
       id: 69,
       corte: "Espetada de Peito de Frango",
       preco: 8983,
       categoria: "Aves",
+      image:"../assets/images/carnes/espetadafrango.jpg"
     },
-    { id: 70, corte: "Frango para Churrasco", preco: 5200, categoria: "Aves" },
-    { id: 71, corte: "Galinha para Cabidela", preco: 4641, categoria: "Aves" },
-    { id: 72, corte: "Nugget de Frango", preco: 3410, categoria: "Aves" },
-    { id: 73, corte: "Cabrito Inteiro", preco: 33000, categoria: "Caprinos" },
+    { id: 70, corte: "Frango para Churrasco", preco: 5200, categoria: "Aves",
+    image: "../assets/images/carnes/frangochurasco.jpg" },
+    
+    { id: 71, corte: "Galinha para Cabidela", preco: 4641, categoria: "Aves" ,
+      image:"../assets/images/carnes/galinhacabidela.jpg"},
+      
+    { id: 72, corte: "Nugget de Frango", preco: 3410, categoria: "Aves",
+      image:"../assets/images/carnes/80245427-nuggets-de-frango-cru-de-comida-instantânea-já-prontos-para-cozinhar.jpg" },
+    { id: 73, corte: "Cabrito Inteiro", preco: 33000, categoria: "Caprinos",
+      image:"../assets/images/carnes/cabritointeiro.png" },
     {
       id: 74,
-      corte: "Meio cabrito Inteiro",
+      corte: "Meio cabrito ",
       preco: 19000,
       categoria: "Caprinos",
+      image:"../assets/images/carnes/cabritointeiro.png"
     },
-    { id: 75, corte: "Caixa Churrasco", preco: 77249, categoria: "Caixas" },
-    { id: 76, corte: "Caixa Gulungo", preco: 97798, categoria: "Caixas" },
-    { id: 77, corte: "Caixa Kwanza", preco: 70408, categoria: "Caixas" },
-    { id: 78, corte: "Caixa Kalandula", preco: 54108, categoria: "Caixas" },
-    { id: 79, corte: "Caixa Serra da Leba", preco: 42898, categoria: "Caixas" },
-    { id: 80, corte: "Caixa Kandengue", preco: 42064, categoria: "Caixas" },
+    { id: 75, corte: "Caixa Churrasco", preco: 77249, categoria: "Caixas"
+    ,
+      image:"../assets/images/produtos/IMG-20240425-WA0027.jpg"},
+    { id: 76, corte: "Caixa Gulungo", preco: 97798, categoria: "Caixas"
+    ,
+    image: "../assets/images/produtos/IMG-20240425-WA0027.jpg"},
+    { id: 77, corte: "Caixa Kwanza", preco: 70408, categoria: "Caixas" ,
+      image:"../assets/images/produtos/IMG-20240425-WA0028.jpg"},
+    { id: 78, corte: "Caixa Kalandula", preco: 54108, categoria: "Caixas" ,
+    image: "../assets/images/produtos/IMG-20240425-WA0026.jpg"},
+    { id: 79, corte: "Caixa Serra da Leba", preco: 42898, categoria: "Caixas",
+    image: "../assets/images/produtos/IMG-20240425-WA0024.jpg" },
+    { id: 80, corte: "Caixa Kandengue", preco: 42064, categoria: "Caixas" ,
+    image: "../assets/images/produtos/IMG-20240425-WA0024.jpg"},
   ]);
   Alpine.store("categorias", [
     { id: 0, active: false, categoria: "Bovinos" },
