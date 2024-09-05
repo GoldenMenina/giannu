@@ -34,7 +34,7 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <script defer src="assets/js/alpine.cdn.min.js"></script>
-<style>
+      <style>
         
         .image-container {
             position: relative;
@@ -73,20 +73,22 @@
         .tooltip {
             position: absolute;
             background-color: white;
-            padding: 10px;
+            padding: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
             display: none;
             z-index: 10;
             max-width: 150px;
+            font-size: 14px;
         }
         .tooltip img {
-            width: 100%;
+            width: 50px;
             height: auto;
             margin-top: 5px;
             border-radius: 5px;
         }
     </style>
+    
   </head>
   
   
@@ -868,7 +870,8 @@
             <span>Conheça</span>
             <h2>Mapa de Bovino</h2>
           </div>
-      <div class="image-container" id="image-container">
+      
+<div class="image-container" id="image-container">
     <img src="assets/images/cow.png" alt="Beef Cuts" id="image">
 
     <!-- Pulsing points for each beef cut -->
@@ -889,7 +892,6 @@
     <!-- Tooltip to show titles and thumbnail -->
     <div id="tooltip" class="tooltip"></div>
 </div>
-
       </section>
 
       
@@ -1006,22 +1008,7 @@
           <i class="flaticon-shopping-cart-1"></i></button>
     </div>
 
-    <!-- jequery plugins -->
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.js"></script>
-    <script src="assets/js/wow.js"></script>
-    <script src="assets/js/validation.js"></script>
-    <script src="assets/js/jquery.fancybox.js"></script>
-    <script src="assets/js/appear.js"></script>
-    <script src="assets/js/scrollbar.js"></script>
-    <script src="assets/js/nav-tool.js"></script>
 
-    <!-- main-js -->
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/mainscript.js"></script>
-    
 <script>
     const points = document.querySelectorAll('.point');
     const tooltip = document.getElementById('tooltip');
@@ -1031,8 +1018,10 @@
             const title = point.getAttribute('data-title');
             const imageSrc = point.getAttribute('data-image');
             const rect = point.getBoundingClientRect();
-            tooltip.style.top = `${rect.top - 50}px`;
-            tooltip.style.left = `${rect.left + 20}px`;
+            const imageRect = document.getElementById('image').getBoundingClientRect();
+
+            tooltip.style.top = `${rect.top - imageRect.top - tooltip.offsetHeight}px`;
+            tooltip.style.left = `${rect.left - imageRect.left + 20}px`;
             tooltip.innerHTML = `<strong>${title}</strong><br><img src="${imageSrc}" alt="${title}">`;
             tooltip.style.display = 'block';
         });
@@ -1064,6 +1053,24 @@
 
     adjustPointPositions(); // Initial adjustment on page load
 </script>
+
+    <!-- jequery plugins -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/validation.js"></script>
+    <script src="assets/js/jquery.fancybox.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/scrollbar.js"></script>
+    <script src="assets/js/nav-tool.js"></script>
+
+    <!-- main-js -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/mainscript.js"></script>
+    
+
   </body>
   <!-- End of .page_wrapper -->
 </html>
