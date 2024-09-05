@@ -10,7 +10,7 @@
 
     <title>Giannu Carnes - Melhor Carne de Angola</title>
 
-    <!-- Fav Icon -->
+    
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 
     <!-- Google Fonts -->
@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
 
-    <!-- Stylesheets -->
+    
     <link href="assets/css/font-awesome-all.css" rel="stylesheet" />
     <link href="assets/css/flaticon.css" rel="stylesheet" />
     <link href="assets/css/owl.css" rel="stylesheet" />
@@ -34,8 +34,62 @@
     <link href="assets/css/style.css" rel="stylesheet" />
     <link href="assets/css/responsive.css" rel="stylesheet" />
     <script defer src="assets/js/alpine.cdn.min.js"></script>
-
+<style>
+        
+        .image-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .point {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background-color: green;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+            animation: pulse 1.5s infinite;
+            cursor: pointer;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            }
+            50% {
+                transform: scale(1.5);
+                box-shadow: 0 0 20px rgba(0, 255, 0, 1);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            }
+        }
+        .tooltip {
+            position: absolute;
+            background-color: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            display: none;
+            z-index: 10;
+            max-width: 150px;
+        }
+        .tooltip img {
+            width: 100%;
+            height: auto;
+            margin-top: 5px;
+            border-radius: 5px;
+        }
+    </style>
   </head>
+  
+  
 
   <!-- page wrapper -->
   <body
@@ -63,11 +117,8 @@
   
   >
     <div class="boxed_wrapper ltr">
-      <!-- preloader -->
+      
       <div class="preloader"></div>
-      <!-- preloader -->
-
-      <!-- sidebar cart item -->
 
       <div class="xs-sidebar-group info-group info-sidebar">
         <div class="xs-overlay xs-bg-black"></div>
@@ -159,9 +210,6 @@
           </div>
         </div>
       </div>
-      <!-- END sidebar widget item -->
-
-      <!-- main header -->
 
       <header class="main-header style-two">
         <div class="header-top">
@@ -307,9 +355,7 @@
           </div>
         </div>
       </header>
-      <!-- main-header end -->
-
-      <!-- Mobile Menu  -->
+      
       <div class="mobile-menu">
         <div class="menu-backdrop"></div>
         <div class="close-btn"><i class="fas fa-times"></i></div>
@@ -356,9 +402,7 @@
           </div>
         </nav>
       </div>
-      <!-- End Mobile Menu -->
-
-      <!-- main-slider -->
+      
       <section class="main-slider style-two">
         <div class="main-slider-carousel owl-theme owl-carousel owl-dots-none">
           <div class="slide-item">
@@ -423,10 +467,8 @@
           </div>
         </div>
       </section>
+      
 
-      <!-- main-slider end -->
-
-      <!-- feature-section -->
       <section class="feature-section bg-color-3">
         <div class="auto-container">
           <div
@@ -458,9 +500,7 @@
           </div>
         </div>
       </section>
-      <!-- feature-section end -->
-
-      <!-- about-style-two -->
+      
       <section class="about-style-two alternate-2 bg-color-3">
         <div class="auto-container">
           <div class="row align-items-center clearfix">
@@ -509,7 +549,8 @@
         </div>
       </section>
 
-      <!-- about-style-two end -->
+
+
       <section class="portfolio-section sec-pad">
         <div class="auto-container">
             <div class="single-item-carousel owl-carousel owl-theme owl-dots-none owl-loaded owl-drag">
@@ -554,9 +595,8 @@
                 </div></div></div></div><div class="owl-nav disabled"><div class="owl-prev"><span class="flaticon-left"></span></div><div class="owl-next"><span class="flaticon-right"></span></div></div><div class="owl-dots"><div class="owl-dot active"><span></span></div><div class="owl-dot"><span></span></div><div class="owl-dot"><span></span></div></div></div>
         </div>
     </section>
-      <!-- service-style-two end -->
 
-      <!-- shop-style-two -->
+      
       <section class="shop-style-two bg-color-3">
         <div class="auto-container">
           <div class="sec-title light text-center">
@@ -701,6 +741,10 @@
         </div>
       </section>
       
+      
+      
+      
+      
       <section class="service-section">
             <div class="auto-container">
               <div class="sec-title text-center">
@@ -820,12 +864,35 @@
         </section>
       
       <section>
-        <img src="assets/images/cortes-de-carne-do-boi-infografico.jpg">
+          <div class="sec-title text-center">
+            <span>Conheça</span>
+            <h2>Mapa de Bovino</h2>
+          </div>
+      <div class="image-container" id="image-container">
+    <img src="assets/images/cow.png" alt="Beef Cuts" id="image">
+
+    <!-- Pulsing points for each beef cut -->
+    <div class="point" style="top: 14.33%; left: 36%;" data-title="CUPIM" data-image="cupim-thumbnail.jpg"></div>
+    <div class="point" style="top: 23.53%; left: 32.5%;" data-title="ACEM" data-image="acem-thumbnail.jpg"></div>
+    <div class="point" style="top: 46.33%; left: 28.5%;" data-title="PEITO" data-image="peito-thumbnail.jpg"></div>
+    <div class="point" style="top: 19.13%; left: 58.88%;" data-title="COSTELA" data-image="costela-thumbnail.jpg"></div>
+    <div class="point" style="top: 51.33%; left: 74.88%;" data-title="FRALDINHA" data-image="fraldinha-thumbnail.jpg"></div>
+    <div class="point" style="top: 32.33%; left: 63.75%;" data-title="FILÉ MIGNON" data-image="filemignon-thumbnail.jpg"></div>
+    <div class="point" style="top: 19.73%; left: 87.25%;" data-title="PICANHA" data-image="picanha-thumbnail.jpg"></div>
+    <div class="point" style="top: 32.53%; left: 83.38%;" data-title="ALCATRA" data-image="alcatra-thumbnail.jpg"></div>
+    <div class="point" style="top: 52.13%; left: 80.63%;" data-title="MAMINHA" data-image="maminha-thumbnail.jpg"></div>
+    <div class="point" style="top: 53.93%; left: 87%;" data-title="COXÃO MOLE" data-image="coxaomole-thumbnail.jpg"></div>
+    <div class="point" style="top: 58.73%; left: 80%;" data-title="PATINHO" data-image="patinho-thumbnail.jpg"></div>
+    <div class="point" style="top: 43.33%; left: 90.88%;" data-title="COXÃO DURO" data-image="coxaoduro-thumbnail.jpg"></div>
+    <div class="point" style="top: 29.93%; left: 99.63%;" data-title="RABO" data-image="rabo-thumbnail.jpg"></div>
+
+    <!-- Tooltip to show titles and thumbnail -->
+    <div id="tooltip" class="tooltip"></div>
+</div>
+
       </section>
 
-      <!-- shop-style-two end -->
-
-      <!-- main-footer -->
+      
       <footer class="main-footer mr-0">
         <div class="auto-container">
           <div class="footer-top">
@@ -929,9 +996,7 @@
           </div>
         </div>
       </footer>
-      <!-- main-footer end -->
-
-      <!--Scroll to top-->
+    
       <button class="scroll-top scroll-to-target" data-target="html">
         <span class="fa fa-arrow-up"></span>
       </button>
@@ -956,6 +1021,49 @@
     <!-- main-js -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/mainscript.js"></script>
+    
+<script>
+    const points = document.querySelectorAll('.point');
+    const tooltip = document.getElementById('tooltip');
+
+    points.forEach(point => {
+        point.addEventListener('click', (event) => {
+            const title = point.getAttribute('data-title');
+            const imageSrc = point.getAttribute('data-image');
+            const rect = point.getBoundingClientRect();
+            tooltip.style.top = `${rect.top - 50}px`;
+            tooltip.style.left = `${rect.left + 20}px`;
+            tooltip.innerHTML = `<strong>${title}</strong><br><img src="${imageSrc}" alt="${title}">`;
+            tooltip.style.display = 'block';
+        });
+    });
+
+    // Hide tooltip when clicking anywhere else
+    document.addEventListener('click', (event) => {
+        if (!event.target.classList.contains('point')) {
+            tooltip.style.display = 'none';
+        }
+    });
+
+    // Handle responsive coordinates
+    window.addEventListener('resize', () => {
+        adjustPointPositions();
+    });
+
+    function adjustPointPositions() {
+        const imageContainer = document.getElementById('image-container');
+        const imageWidth = imageContainer.offsetWidth;
+        const baseWidth = 800; // Base image width in pixels
+
+        points.forEach(point => {
+            const leftPercentage = parseFloat(point.style.left);
+            const newLeft = (leftPercentage / 100) * imageWidth;
+            point.style.left = `${newLeft}px`;
+        });
+    }
+
+    adjustPointPositions(); // Initial adjustment on page load
+</script>
   </body>
   <!-- End of .page_wrapper -->
 </html>
